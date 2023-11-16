@@ -1,4 +1,5 @@
 # test
+# 작업 과정 (아직 다 구현 하지 않았습니다 !) : https://cafe.naver.com/ArticleList.nhn?search.clubid=31004023&search.menuid=29&search.boardtype=L
 
 # 메인 페이지(USER)
 ![메인 페이지(USER)](https://github.com/orangegee/test/assets/135507974/6b7428d8-6b76-48c9-b721-1f692118ce89)
