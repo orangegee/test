@@ -26,7 +26,7 @@ body {
 }
 
 
-/** 하단 페이징 색상 변경 - 시작 */
+/* 하단 페이징 색상 변경 - 시작 */
 .page-link {
   color: #000;
   background-color: #fff;
@@ -47,4 +47,9 @@ body {
   background-color: #fafafa;
   border-color: #ccc;
 }
-/** 하단 페이징 색상 변경 - 끝 */
+/* 하단 페이징 색상 변경 - 끝 */
+
+/* 체크박스 색상 설정 */
+input[type=checkbox] {
+    accent-color:red;
+    }
