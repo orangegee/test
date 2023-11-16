@@ -3,6 +3,14 @@
 # 메인 페이지(USER)
 ![메인 페이지(USER)](https://github.com/orangegee/test/assets/135507974/078c1756-d3b4-4b1c-b39e-1f680c4d655c)
 
+# 회원가입
+![회원가입](https://github.com/orangegee/test/assets/135507974/1b6a227f-ce1a-4fc1-8812-4db5cdc2e7a9)
+
+# 로그인 페이지
+![로그인 페이지](https://github.com/orangegee/test/assets/135507974/0b7163bb-ffe0-416c-9492-bc76d5b45016)
+
+
+
 # 우측 상단 검색 기능 활용
 ![우측 상단 검색 기능 활용](https://github.com/orangegee/test/assets/135507974/784c140c-da4f-4e14-b433-9d35b5f51ed1)
 
@@ -28,8 +36,15 @@
 # 상품 등록 페이지(ADMIN)
 ![상품 등록 페이지(ADMIN)](https://github.com/orangegee/test/assets/135507974/7c8ff48b-89dc-477d-ae0c-686f996b7647)
 
+# 상품 등록(수정)
+![상품 등록(수정)](https://github.com/orangegee/test/assets/135507974/83f8242b-f321-4fee-9b10-f62c89d37744)
+
 # 메인 페이지(ADMIN)
 ![메인 페이지(ADMIN)](https://github.com/orangegee/test/assets/135507974/8a408df5-3481-455b-8132-89a42e4e53b6)
+
+
+
+
 
 
 
