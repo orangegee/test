@@ -1,7 +1,7 @@
 # test
 
 # 메인 페이지(USER)
-![메인 페이지(USER)](https://github.com/orangegee/test/assets/135507974/078c1756-d3b4-4b1c-b39e-1f680c4d655c)
+![메인 페이지(USER)](https://github.com/orangegee/test/assets/135507974/6b7428d8-6b76-48c9-b721-1f692118ce89)
 
 # 회원가입
 ![회원가입](https://github.com/orangegee/test/assets/135507974/1b6a227f-ce1a-4fc1-8812-4db5cdc2e7a9)
