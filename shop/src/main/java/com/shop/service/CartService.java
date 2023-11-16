@@ -19,6 +19,8 @@ import com.shop.dto.CartDetailDto;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.thymeleaf.util.StringUtils;
+
 @Service
 @RequiredArgsConstructor
 @Transactional
@@ -66,6 +68,30 @@ public class CartService {
 
         cartDetailDtoList = cartItemRepository.findCartDetailDtoList(cart.getId()); // 장바구니에 담겨 있는 상품 정보 조회
         return cartDetailDtoList;
+    }
+
+    @Transactional(readOnly = true)
+    public boolean validateCartItem(Long cartItemId, String email){
+        Member curMember = memberRepository.findByEmail(email); // 현재 로그인한 회원 조회
+        CartItem cartItem = cartItemRepository.findById(cartItemId)
+                .orElseThrow(EntityNotFoundException::new);
+        Member savedMember = cartItem.getCart().getMember(); // 장바구니 상품을 저장한 회원 조회
+
+        if(!StringUtils.equals(curMember.getEmail(), savedMember.getEmail())){
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * 장바구니 수량을 업데이트 하는 메소드
+     */
+    public void updateCartItemCount(Long cartItemId, int count){
+        CartItem cartItem = cartItemRepository.findById(cartItemId)
+                .orElseThrow(EntityNotFoundException::new);
+
+        cartItem.updateCount(count);
     }
 
 }
