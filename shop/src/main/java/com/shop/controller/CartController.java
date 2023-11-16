@@ -20,6 +20,9 @@ import com.shop.dto.CartDetailDto;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
 @Controller
 @RequiredArgsConstructor
 public class CartController {
@@ -60,6 +63,24 @@ public class CartController {
         List<CartDetailDto> cartDetailList = cartService.getCartList(principal.getName());
         model.addAttribute("cartItems", cartDetailList); // 조회한 장바구니 상품 정보를 뷰로 전달
         return "cart/cartList";
+    }
+
+    /**
+     * @PatchMapping
+     * : HTTP 메소드에서 PATCH는 요청된 자원의 일부를 업데이트 할 때 사용.
+     * 장바구니 상품의 수량만 업데이트하기 때문에 @PatchMapping 사용하였음.
+     */
+    @PatchMapping(value = "/cartItem/{cartItemId}")
+    public @ResponseBody ResponseEntity updateCartItem(@PathVariable("cartItemId") Long cartItemId, int count, Principal principal){
+
+        if(count <= 0){
+            return new ResponseEntity<String>("최소 1개 이상 담아주세요", HttpStatus.BAD_REQUEST);
+        } else if(!cartService.validateCartItem(cartItemId, principal.getName())){
+            return new ResponseEntity<String>("수정 권한이 없습니다.", HttpStatus.FORBIDDEN);
+        }
+
+        cartService.updateCartItemCount(cartItemId, count);
+        return new ResponseEntity<Long>(cartItemId, HttpStatus.OK);
     }
 
 }
